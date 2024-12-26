@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOTHING STORE</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="OIP (11).jpg">
+    <script>
+         function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.getElementById("content");
+      
+      sidebar.classList.toggle("active");
+      content.classList.toggle("active");
+    }
+    
+    document.addEventListener("click", function(event) {
+      var sidebar = document.getElementById("sidebar");
+      var toggleBtn = document.querySelector(".toggle-btn");
+      
+      if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target) && sidebar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+    const carousel = document.getElementById("imageCarousel");
+    const images = carousel.getElementsByTagName("img");
+    let currentImageIndex = 0;
+
+    function showNextImage() {
+        images[currentImageIndex].classList.remove("active");
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        images[currentImageIndex].classList.add("active");
+    }
+
+    function startCarousel() {
+        setInterval(showNextImage, 3000); // Change image every 3 seconds
+    }
+
+    startCarousel();
+
+    
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="mensajebienvenida"> BIENVENIDO A CLOTHING STORE : CAMISAS Y GORRAS </h1>
+
+    </header>
+    
+    <header class="headernav">
+      <div class="navigation">
+        <a href="Regisnew.php" target="_blank" class="regisnew">INICIAR SESION O REGISTRARSE</a>
+        <a href="personal.html" target="_blank" class="regisnew">CREA TU DISEÑO DE GORRA</a>
+        <a href="SOPORTE.html" target="_blank" class="regisnew">SOPORTE AL CLIENTE</a>
+        <a href="Camisa.html" target="_blank" class="regisnew">DISEÑA TU CAMISA </a>
+        <a href="Registro.php" target="_blank" class="regisnew">REGISTRATE</a>
+
+      </div>
+    </header>
+
+    <div id="caja1">
+      <p id="quesomos">¿QUE SOMOS?</p>
+      <h1 id="empresa">SOMOS LA MEJOR EMPRESA CON LAS MEJORES GORRAS Y DISEÑOS DEL MERCADO , TAMBIEN PUEDES CREAR TUS PROPIOS DISEÑOS</h1>
+      <h1 id="diseno">A continuación Mostramos Algunas de Nuestras Gorras y Camisas Ya Diseñadas</h1>
+      
+      <div id="imageCarousel" class="carousel">
+          <img src="OIP (1).jpg" alt="Image 1">
+          <img src="OIP (2).jpg" alt="Image 2">
+          <img src="OIP (3).jpg" alt="Image 3">
+          <img src="OIP (4).jpg" alt="Image 4">
+          <img src="OIP (5).jpg" alt="Image 5">
+      </div>
+      
+  </div>
+    <main>
+        <div class="catalogo">
+
+          <div class="producto">
+            <h3>CAMISA CUSTOM DESIGN</h3>
+            <img src="OIP (9).jpg" alt="GORRA CUSTOM DESIGN">
+            <p>CON ENVIO GRATIS: SI</p>
+            <p>Precio: $2,000</p>
+            <p>MARCA: CUSTOMER</p>
+            <a href="COMPRAP1.html"target="_blank" class="regisnew">COMPRAR</a>
+           </div>
+
+         <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+         <img src="images.jpeg" alt="GORRA CUSTOM DESIGN">
+         <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $2,500</p>
+         <p>MARCA: CUSTOMER</p>
+         <a href="COMPRAP2.html"target="_blank" class="regisnew">COMPRAR</a>
+        </div>
+
+        <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP.jpg" alt="GORRA CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $3,000</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP3.html"target="_blank" class="regisnew">COMPRAR</a>
+        </div>
+
+        <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="descarga1.jpg" alt="GORRA CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $3,500</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRA4.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>CAMISA CUSTOM DESIGN</h3>
+        <img src="OIP (8).jpg" alt="GORRA CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: NO</p>
+        <p>Precio: $1,000</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP5.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP (1).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: NO</p>
+        <p>Precio: $500</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP6.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP (2).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: NO</p>
+        <p>Precio: $700</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP7.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP (3).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: NO</p>
+        <p>Precio: $100</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP8.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP (4).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: NO</p>
+        <p>Precio: $200</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP9.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>GORRA CUSTOM DESIGN</h3>
+        <img src="OIP (5).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $1,000</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP10.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>CAMISA CUSTOM DESIGN</h3>
+        <img src="OIP (6).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $2,000</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP11.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+
+       <div class="producto">
+        <h3>CAMISA CUSTOM DESIGN</h3>
+        <img src="OIP (7).jpg" alt="GORRAS CUSTOM DESIGN">
+        <p>CON ENVIO GRATIS: SI</p>
+        <p>Precio: $1,000</p>
+        <p>MARCA: CUSTOMER</p>
+        <a href="COMPRAP12.html"target="_blank" class="regisnew">COMPRAR</a>
+       </div>
+</div>
+    </main>
+    <footer>
+        <p>Desarrollado por:</p>
+        <ul>
+          <li></li>
+          <li>José Manuel Laines Hernandez</li>
+        </ul>
+        <p>TODOS LOS DERECHOS RESERVADOS... COPYRIGHT 2023-2027</p>
+        
+      </footer>
+      <body id="2">
+        <div id="imageCarousel" class="carousel">
+          <img src="OIP (1).jpg" alt="Image 1">
+          <img src="OIP (2).jpg" alt="Image 2">
+          <img src="OIP (3).jpg" alt="Image 3">
+          <img src="OIP (4).jpg" alt="Image 4">
+          <img src="OIP (5).jpg" alt="Image 5">
+      </div>
+      </body>
+      <body id="SEGUNDO2">
+        <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+        
+        <div class="sidebar" id="sidebar">
+        <ul id="menu">
+        <p id="MENUDE">BIENVENIDO A CLOTHING STORE</p> 
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="Registro.php">REGISTRARSE</a></li>
+        <li><a href="SOPORTE.html">SOPORTE AL CLIENTE</a></li>
+        <li><a href="Camisa.html">DISEÑA TU CAMISA</a></li>
+        <li><a href="personal.html">DISEÑA TU GORRA</a></li>
+        </ul>
+        </div>
+
+        </body>
+</body>
+</html>

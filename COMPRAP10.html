@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOTHING STORE</title>
+    <link rel="icon" href="OIP (11).jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color:blanchedalmond;
+
+        }
+
+        .product-details {
+            display: flex;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        .product-image {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: 100%;
+        }
+
+        .purchase-form {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .purchase-form h2 {
+            margin-top: 0;
+        }
+
+        .purchase-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .purchase-form input,
+        .purchase-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .purchase-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 10px;
+            border-left: 1px solid #ccc;
+        }
+
+        .product-info h2 {
+            margin-top: 0;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+        }
+        #SEGUNDO2 {
+    margin: 0;
+    padding: 0;
+    margin: 10px;
+  }
+  
+  .sidebar {
+    background-color:white;
+    color: gold;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    z-index: 999;
+    transition: left 0.3s ease;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  
+  .sidebar.active {
+    left: 0;
+    border: 2px solid black;
+  }
+  
+  .toggle-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    
+  }
+  
+  .toggle-btn:hover {
+    background-color: #555;
+    
+  }
+  
+  #menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+    
+  }
+  
+  #menu li {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #menu li a {
+    color: gold;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+  }
+  #MENUDE{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+    </style>
+    <script>
+function showSuccessMessage() {
+            const productDetails = document.querySelector('.product-details');
+            productDetails.innerHTML = '<h2>Compra Exitosa</h2><p>¡Gracias por tu compra!</p>';
+        }
+        function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.getElementById("content");
+      
+      sidebar.classList.toggle("active");
+      content.classList.toggle("active");
+    }
+    
+    document.addEventListener("click", function(event) {
+      var sidebar = document.getElementById("sidebar");
+      var toggleBtn = document.querySelector(".toggle-btn");
+      
+      if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target) && sidebar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+
+    </script>
+</head>
+<body>
+    <div class="product-details">
+        <div class="product-image">
+            <img src="OIP (5).jpg" alt="Producto">
+        </div>
+        <div class="purchase-form">
+            <h2>Completa los detalles de tu compra</h2>
+            <form>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="phone">Número de Teléfono:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="credit-card">Tarjeta de Crédito:</label>
+                <input type="text" id="credit-card" name="credit-card" required>
+                
+                <label for="address">Dirección de Envío:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+                
+                <button type="submit">Realizar Compra</button>
+            </form>
+        </div>
+        <div class="product-info">
+            <h2>Información del Producto</h2>
+            <p>Precio: $1000</p>
+            <p>Talla: M</p>
+            <p>Producto: Camiseta</p>
+            <p>Origen: Fabricado en ALEMANIA</p>
+            <p>Envío Gratis: Sí</p>
+        </div>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission (for demonstration purposes)
+            showSuccessMessage();
+        });
+    </script>
+</body>
+<body id="SEGUNDO2">
+    <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+    
+    <div class="sidebar" id="sidebar">
+    <ul id="menu">
+    <p id="MENUDE">BIENVENIDO A CLOTHING STORE</p> 
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="Regisnew.html">REGISTRARSE</a></li>
+    <li><a href="SOPORTE.html">SOPORTE AL CLIENTE</a></li>
+    <li><a href="Camisa.html">DISEÑA TU CAMISA</a></li>
+    <li><a href="personal.html">DISEÑA TU GORRA</a></li>
+    </ul>
+    </div>
+
+    </body>
+</html>

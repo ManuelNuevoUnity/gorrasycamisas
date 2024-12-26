@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOTHING STORE</title>
+    <link rel="icon" href="OIP (11).jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: gold;
+        }
+
+        .support-form {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .support-form h2 {
+            margin-top: 0;
+            color: #333;
+            height: 100%;
+            width: 100%;
+        }
+
+        .support-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            height: 100%;
+            width: 100%;
+        }
+
+        .support-form input,
+        .support-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .support-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            height: 100%;
+            width: 100%;
+        }
+
+        .support-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            height: 100%;
+            width: 100%;
+        }
+    
+  #SEGUNDO2 {
+    margin: 0;
+    padding: 0;
+    margin: 10px;
+  }
+  
+  .sidebar {
+    background-color:white;
+    color: gold;
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -280px;
+    z-index: 999;
+    transition: left 0.3s ease;
+    border-radius: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  
+  .sidebar.active {
+    left: 0;
+    border: 2px solid black;
+  }
+  
+  .toggle-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    
+  }
+  
+  .toggle-btn:hover {
+    background-color: #555;
+    
+  }
+  
+  #menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 60px;
+    
+  }
+  
+  #menu li {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  #menu li a {
+    color: gold;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+  }
+  #MENUDE{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+    </style>
+</head>
+<body>
+    <div class="support-form">
+        <h2>Soporte y Comentarios</h2>
+
+        <div class="form-group">
+            <label for="opinion-name">Tu Nombre:</label>
+            <input type="text" id="opinion-name" name="opinion-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="opinion-comment">Escribe tu Opinión:</label>
+            <textarea id="opinion-comment" name="opinion-comment" rows="4" required></textarea>
+        </div>
+
+        <button id="opinion-submit" type="button">Subir Opinión</button>
+
+        <div class="form-group">
+            <h3>Reclamos</h3>
+            <label for="complaint-name">Tu Nombre:</label>
+            <input type="text" id="complaint-name" name="complaint-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="product-name">Nombre del Artículo Comprado:</label>
+            <input type="text" id="product-name" name="product-name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="complaint-comment">Escribe tu Reclamo:</label>
+            <textarea id="complaint-comment" name="complaint-comment" rows="4" required></textarea>
+        </div>
+
+        <button id="complaint-submit" type="button">Subir Reclamo</button>
+    </div>
+
+    <script>
+        const opinionSubmitBtn = document.getElementById('opinion-submit');
+        const complaintSubmitBtn = document.getElementById('complaint-submit');
+
+        opinionSubmitBtn.addEventListener('click', () => {
+            alert('¡Opinión enviada con éxito!');
+        });
+
+        complaintSubmitBtn.addEventListener('click', () => {
+            alert('¡Reclamo enviado con éxito!');
+        });
+        function toggleMenu() {
+      var sidebar = document.getElementById("sidebar");
+      var content = document.getElementById("content");
+      
+      sidebar.classList.toggle("active");
+      content.classList.toggle("active");
+    }
+    
+    document.addEventListener("click", function(event) {
+      var sidebar = document.getElementById("sidebar");
+      var toggleBtn = document.querySelector(".toggle-btn");
+      
+      if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target) && sidebar.classList.contains("active")) {
+        toggleMenu();
+      }
+    });
+    </script>
+</body>
+<body id="SEGUNDO2">
+    <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+    
+    <div class="sidebar" id="sidebar">
+    <ul id="menu">
+    <p id="MENUDE">BIENVENIDO A CLOTHING STORE</p> 
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="Regisnew.html">REGISTRARSE</a></li>
+    <li><a href="SOPORTE.html">SOPORTE AL CLIENTE</a></li>
+    <li><a href="Camisa.html">DISEÑA TU CAMISA</a></li>
+    <li><a href="personal.html">DISEÑA TU GORRA</a></li>
+    </ul>
+    </div>
+  
+    </body>
+</html>
